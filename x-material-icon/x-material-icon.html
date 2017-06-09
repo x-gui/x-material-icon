@@ -1,0 +1,29 @@
+<!--
+Example
+<x-material-icon icon="face"></x-material-icon>
+<x-material-icon icon="face" class="md-18"></x-material-icon>
+-->
+
+<link rel="import" href="../lib-material-icon/lib-material-icon.html">
+
+<script>
+(function(window, document, undefined) {
+  var prototype = Object.create(HTMLElement.prototype);
+  prototype.createdCallback = function() {
+    this.iEl = document.createElement('i');
+    this.updateFromAttributes();
+    this.appendChild(this.iEl);
+  };
+  prototype.attributeChangedCallback = function(attr, oldVal, newVal) {
+    this.updateFromAttributes();
+  };
+  prototype.updateFromAttributes = function() {
+    // Forward the className
+    this.iEl.className = 'material-icons ' + this.className;
+    this.iEl.textContent = this.getAttribute('icon');
+  }
+  window.XMaterialIcon = document.registerElement("x-material-icon", {
+    prototype: prototype,
+  });
+})(window, document);
+</script>

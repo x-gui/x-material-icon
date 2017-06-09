@@ -1,0 +1,29 @@
+{
+  "name": "x-material-icon",
+  "authors": [
+    "Richard Caceres @rchrd2"
+  ],
+  "description": "Web component for Google Material Icons.",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "web",
+    "component",
+    "x-gui",
+    "polymer",
+    "material design",
+    "icons"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/x-gui/x-material-icon",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "webcomponentsjs": "^0.7.22"
+  }
+}
